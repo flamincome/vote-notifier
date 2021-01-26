@@ -1,0 +1,154 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "voteId",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "creator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "metadata",
+                "type": "string"
+            }
+        ],
+        "name": "StartVote",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "token",
+        "outputs": [
+            {
+                "internalType": "contract IMiniMeToken",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "voteTime",
+        "outputs": [
+            {
+                "internalType": "uint64",
+                "name": "",
+                "type": "uint64"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "votesLength",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "getVote",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "open",
+                "type": "bool"
+            },
+            {
+                "internalType": "bool",
+                "name": "executed",
+                "type": "bool"
+            },
+            {
+                "internalType": "uint64",
+                "name": "startDate",
+                "type": "uint64"
+            },
+            {
+                "internalType": "uint64",
+                "name": "snapshotBlock",
+                "type": "uint64"
+            },
+            {
+                "internalType": "uint64",
+                "name": "supportRequired",
+                "type": "uint64"
+            },
+            {
+                "internalType": "uint64",
+                "name": "minAcceptQuorum",
+                "type": "uint64"
+            },
+            {
+                "internalType": "uint256",
+                "name": "yea",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "nay",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "votingPower",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes",
+                "name": "script",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "getVoterState",
+        "outputs": [
+            {
+                "internalType": "enum IVoting.VoterState",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
