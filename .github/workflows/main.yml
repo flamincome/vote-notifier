@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  schedule:
+    - cron: '* */4 * * *'
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
+      - run: npm install web3
+      
+      - run: INFURA_TOKEN=4d6417f6220e41c9b7bb30bb5c5b9db6 node index.js
+
